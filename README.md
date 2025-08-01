@@ -30,17 +30,17 @@ After installing the required libraries, you can download the project files, inc
 **IMPORTANT** - The notebook assumes the datasets are located in a ```data``` subfolder within the project directory.
 # Methodology
 The project follows a standard machine learning methodology:
-1. Data Selection: The book review dataset (bookReviewsData.csv) was chosen for this binary classification problem.
-2. Exploratory Data Analysis (EDA): The data was inspected for missing values, duplicates, and class imbalance. Duplicate reviews were removed, and the data was found to be fairly balanced, with no missing values.
-3. Data Preprocessing:
-   a. The text data in the 'Review' column was preprocessed using gensim.utils.simple_preprocess to convert the text to lowercase and tokenize it.
-   b. The preprocessed text was then converted into numerical features using the TF-IDF (Term Frequency-Inverse Document Frequency) vectorizer from sklearn.feature_extraction.text.TfidfVectorizer.
-4. Model Selection and Training:
-   a. Logistic Regression: A Logistic Regression model was trained on the TF-IDF vectorized data.
-   b. Neural Network: A sequential Neural Network model was constructed with multiple dense layers and dropout layers to prevent overfitting.
-5. Model Evaluation and Optimization:
-   a. Logistic Regression: The model was evaluated using accuracy and AUC (Area Under the Curve) scores. Hyperparameter tuning was performed by adjusting the C parameter.
-   b. Neural Network: The model was evaluated using accuracy and loss on a validation set during training. Optimization involved experimenting with the number of epochs, units in the dense layers, and the inclusion of dropout layers.
+1.**Data Selection**: The book review dataset (bookReviewsData.csv) was chosen for this binary classification problem.
+2.**Exploratory Data Analysis (EDA)**: The data was inspected for missing values, duplicates, and class imbalance. Duplicate reviews were removed, and the data was found to be fairly balanced, with no missing values.
+3. **Data Preprocessing:**
+   1. The text data in the 'Review' column was preprocessed using gensim.utils.simple_preprocess to convert the text to lowercase and tokenize it.
+   2. The preprocessed text was then converted into numerical features using the TF-IDF (Term Frequency-Inverse Document Frequency) vectorizer from sklearn.feature_extraction.text.TfidfVectorizer.
+4. **Model Selection and Training:**
+   1. Logistic Regression: A Logistic Regression model was trained on the TF-IDF vectorized data.
+   2. Neural Network: A sequential Neural Network model was constructed with multiple dense layers and dropout layers to prevent overfitting.
+5. **Model Evaluation and Optimization:**
+   1. Logistic Regression: The model was evaluated using accuracy and AUC (Area Under the Curve) scores. Hyperparameter tuning was performed by adjusting the C parameter.
+   2. Neural Network: The model was evaluated using accuracy and loss on a validation set during training. Optimization involved experimenting with the number of epochs, units in the dense layers, and the inclusion of dropout layers.
 
 The performance of both models was compared to determine the best-performing one.
 ## Sample Datasets
@@ -65,8 +65,8 @@ The performance of the two models was evaluated on the test set.
 
 # Visualizations
 The notebook includes the following visualizations:
-- Count plot: A bar chart showing the distribution of positive vs. negative reviews to visualize class balance.
-- Loss & Accuracy Plots: Line graphs illustrating the training and validation loss and accuracy over epochs for the Neural Network model.
+- **Count plot:** A bar chart showing the distribution of positive vs. negative reviews to visualize class balance.
+- **Loss & Accuracy Plots:** Line graphs illustrating the training and validation loss and accuracy over epochs for the Neural Network model.
 
 # What's Next - Next Steps
 - Explore other NLP techniques: Experiment with different text preprocessing methods, such as lemmatization or stemming, to see if they improve model performance.
